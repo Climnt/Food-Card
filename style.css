@@ -1,0 +1,129 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100svh;
+    font-family: var(--Google-font-OpenSans);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Google-font-OpenSans: "Open Sans", sans-serif;
+    --CssScan-BoxShadow:rgba(0, 0, 0, 0.16) 0px 3px 6px, 
+                        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    --button-color-redorange: rgb(255, 109, 56);
+    --hover-button-orange: rgb(255, 166, 0);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88%;
+    max-width: 400px;
+    height: auto;
+    box-shadow: var(--CssScan-BoxShadow);
+    border-radius: 10px;
+}
+
+.food-image {
+    width: 100%;
+    position: relative;
+
+    & img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.heart-icon {
+    position: absolute;
+    transform: translateY(495%) translateX(740%);
+
+    @media (max-width: 430px) {
+        display: none;
+    }
+
+    & img {
+      transition: all 0.5s;
+
+      &:hover {
+        scale: 1.5;
+        transition: all 0.5s;
+      }
+    }
+}
+
+.con-food {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    margin-top: 20px;
+
+    & #serves-icon {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+
+        & span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+
+            & img {
+                width: 20px;
+            }
+            & p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    & #about-name-food {
+       font-size: 0.95rem;
+       padding-bottom: 15px;
+
+        @media (max-width: 425px) {
+            font-size: 0.85rem;
+        }
+    }
+    & h2 {
+        @media (max-width: 425px) {
+            font-size: 1.3rem;
+        }
+        @media (max-width: 375px) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.LetHimCook {
+    width: 100%;
+    height: 35px;
+    border-radius: 0 0 10px 10px;
+
+    & button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        transition: ease-in-out 0.5s;
+        border-radius: 0 0 10px 10px;
+        font-weight: 600;
+        background-color: var(--button-color-redorange);
+
+        &:hover {
+            background-color: var(--hover-button-orange);
+            transition: ease-in-out 0.5s;
+        }
+        & a {
+            color: black;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.25em;
+            text-decoration-style: dotted;
+        }
+    }
+}
