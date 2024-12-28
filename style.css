@@ -1,12 +1,15 @@
 body {
     display: grid;
     place-items: center;
+    height: 100vh;
     height: 100svh;
     font-family: var(--Google-font-OpenSans);
 }
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid blueviolet; */
 }
 :root {
     --Google-font-OpenSans: "Open Sans", sans-serif;
@@ -21,12 +24,11 @@ main {
     align-items: center;
     width: 88%;
     max-width: 400px;
-    height: auto;
     box-shadow: var(--CssScan-BoxShadow);
     border-radius: 10px;
 }
 
-.food-image {
+main .food-image {
     width: 100%;
     position: relative;
 
@@ -37,7 +39,7 @@ main {
     }
 }
 
-.heart-icon {
+main .heart-icon {
     position: absolute;
     transform: translateY(495%) translateX(740%);
 
@@ -55,15 +57,14 @@ main {
     }
 }
 
-.con-food {
+main .con-food {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     width: 90%;
     margin-top: 20px;
 
-    & #serves-icon {
+    & .serves-icon {
         display: flex;
         align-items: center;
         gap: 15px;
@@ -73,6 +74,7 @@ main {
             display: inline-flex;
             align-items: center;
             gap: 5px;
+            
 
             & img {
                 width: 20px;
@@ -83,7 +85,7 @@ main {
         }
     }
 
-    & #about-name-food {
+    & .about-name-food {
        font-size: 0.95rem;
        padding-bottom: 15px;
 
@@ -101,8 +103,9 @@ main {
     }
 }
 
-.LetHimCook {
+main .LetHimCook {
     width: 100%;
+    background-color: aliceblue;
     height: 35px;
     border-radius: 0 0 10px 10px;
 
@@ -114,16 +117,11 @@ main {
         border-radius: 0 0 10px 10px;
         font-weight: 600;
         background-color: var(--button-color-redorange);
+        color: black;
 
         &:hover {
             background-color: var(--hover-button-orange);
             transition: ease-in-out 0.5s;
-        }
-        & a {
-            color: black;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 0.25em;
-            text-decoration-style: dotted;
         }
     }
 }
