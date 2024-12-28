@@ -75,8 +75,8 @@ main .con-food {
             display: inline-flex;
             align-items: center;
             gap: 5px;
+            text-wrap: nowrap;
             
-
             & img {
                 width: 20px;
             }
